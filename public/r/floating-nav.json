@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "floating-nav",
+  "type": "registry:component",
+  "title": "Floating Navigation",
+  "description": "Floating navigation bar that appears on scroll.",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/blocks/landing-page/floating-nav.tsx",
+      "content": "'use client';\n\nimport { cn } from '@/lib/utils';\nimport { Button } from '@/components/ui/button';\nimport { useEffect, useState } from 'react';\n\ninterface FloatingNavProps {\n  className?: string;\n}\n\nconst navItems = [\n  { label: 'Hero', href: '#hero' },\n  { label: 'Pricing', href: '#pricing' },\n  { label: 'About', href: '#about' },\n  { label: 'Contact', href: '#contact' },\n];\n\nexport function FloatingNav({ className }: FloatingNavProps) {\n  const [isScrolled, setIsScrolled] = useState(false);\n  const [activeSection, setActiveSection] = useState('hero');\n\n  useEffect(() => {\n    const handleScroll = () => {\n      setIsScrolled(window.scrollY > 50);\n      \n      // Determine active section based on scroll position\n      const sections = navItems.map(item => item.href.substring(1));\n      const scrollPosition = window.scrollY + 100;\n      \n      for (const section of sections) {\n        const element = document.getElementById(section);\n        if (element) {\n          const { offsetTop, offsetHeight } = element;\n          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {\n            setActiveSection(section);\n            break;\n          }\n        }\n      }\n    };\n\n    window.addEventListener('scroll', handleScroll);\n    handleScroll(); // Call once to set initial state\n    \n    return () => window.removeEventListener('scroll', handleScroll);\n  }, []);\n\n  const scrollToSection = (href: string) => {\n    const element = document.getElementById(href.substring(1));\n    if (element) {\n      element.scrollIntoView({ behavior: 'smooth' });\n    }\n  };\n\n  return (\n    <nav\n      className={cn(\n        'fixed top-4 left-1/2 z-50 -translate-x-1/2 transition-all duration-300',\n        'rounded-full border px-6 py-3',\n        isScrolled\n          ? 'bg-background/80 backdrop-blur-md shadow-lg'\n          : 'bg-background/95 backdrop-blur-sm',\n        className\n      )}\n    >\n      <div className=\"flex items-center space-x-1\">\n        {navItems.map((item) => (\n          <Button\n            key={item.href}\n            variant={activeSection === item.href.substring(1) ? 'default' : 'ghost'}\n            size=\"sm\"\n            onClick={() => scrollToSection(item.href)}\n            className=\"text-sm font-medium transition-colors\"\n          >\n            {item.label}\n          </Button>\n        ))}\n      </div>\n    </nav>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

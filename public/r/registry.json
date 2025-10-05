@@ -1,0 +1,73 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "Lynqsides Shadcn Registry",
+  "homepage": "http://localhost:3000",
+  "items": [
+    {
+      "name": "landing-page",
+      "type": "registry:component",
+      "title": "Landing Page",
+      "description": "A comprehensive landing page with hero, pricing, about, and contact sections.",
+      "dependencies": ["@icons-pack/react-simple-icons", "@number-flow/react", "media-chrome", "react-fast-marquee"],
+      "registryDependencies": ["button", "card", "badge", "tabs"],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/landing-page/page.tsx",
+          "type": "registry:page",
+          "target": "app/hero/page.tsx"
+        },
+        {
+          "path": "registry/new-york/blocks/landing-page/components/announcement.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/new-york/blocks/landing-page/components/marquee.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/new-york/blocks/landing-page/components/video-player.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "announcement",
+      "type": "registry:component",
+      "title": "Announcement",
+      "description": "Announcement banner component with tag and title support.",
+      "registryDependencies": ["badge"],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/landing-page/components/announcement.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "marquee",
+      "type": "registry:component",
+      "title": "Marquee",
+      "description": "Scrolling marquee component with fade effects.",
+      "dependencies": ["react-fast-marquee"],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/landing-page/components/marquee.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "video-player",
+      "type": "registry:component",
+      "title": "Video Player",
+      "description": "Custom video player with controls.",
+      "dependencies": ["media-chrome"],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/landing-page/components/video-player.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}
