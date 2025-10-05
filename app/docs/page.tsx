@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { ExternalLink, Copy, Check, Code, Palette, Zap, Package, FileText, Component, Video, Megaphone, Play, Home } from "lucide-react"
+import { ExternalLink, Copy, Check, Package, FileText, Component, Video, Megaphone, Play, Home } from "lucide-react"
 
 export default function DocsPage() {
   const [copiedStates, setCopiedStates] = React.useState<Record<string, boolean>>({})
