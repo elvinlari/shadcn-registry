@@ -131,13 +131,8 @@ export default function DocsPage() {
                 
                 <CodeBlock
                   id="step2"
-                  title="2. Add our registry"
-                >npx shadcn@latest add https://shadcn-elvinlari-registry.vercel.app/</CodeBlock>
-                
-                <CodeBlock
-                  id="step3"
-                  title="3. Install components"
-                >npx shadcn@latest add landing-page</CodeBlock>
+                  title="2. Add the landing page component"
+                >pnpm dlx shadcn@latest add https://shadcn-elvinlari-registry.vercel.app/r/landing-page.json</CodeBlock>
               </TabsContent>
               
               <TabsContent value="manual" className="space-y-4">
@@ -341,7 +336,7 @@ const logos = [
               <div className="mt-3">
                 <CodeBlock
                   id="announcement-install"
-                >npx shadcn@latest add announcement</CodeBlock>
+                >pnpm dlx shadcn@latest add https://shadcn-elvinlari-registry.vercel.app/r/announcement.json</CodeBlock>
               </div>
             </div>
 
@@ -366,7 +361,7 @@ const logos = [
               <div className="mt-3">
                 <CodeBlock
                   id="marquee-install"
-                >npx shadcn@latest add marquee</CodeBlock>
+                >pnpm dlx shadcn@latest add https://shadcn-elvinlari-registry.vercel.app/r/marquee.json</CodeBlock>
               </div>
             </div>
 
@@ -392,7 +387,7 @@ const logos = [
               <div className="mt-3">
                 <CodeBlock
                   id="video-install"
-                >npx shadcn@latest add video-player</CodeBlock>
+                >pnpm dlx shadcn@latest add https://shadcn-elvinlari-registry.vercel.app/r/video-player.json</CodeBlock>
               </div>
             </div>
           </div>

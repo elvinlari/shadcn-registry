@@ -13,8 +13,7 @@
       "files": [
         {
           "path": "registry/new-york/blocks/landing-page/page.tsx",
-          "type": "registry:page",
-          "target": "app/hero/page.tsx"
+          "type": "registry:component"
         },
         {
           "path": "registry/new-york/blocks/landing-page/components/announcement.tsx",

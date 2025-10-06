@@ -109,12 +109,8 @@ export default function Home() {
             <CodeBlock id="cli-install">npx shadcn@latest init</CodeBlock>
           </div>
           <div>
-            <h4 className="font-medium mb-2">Add our registry</h4>
-            <CodeBlock id="registry-add">npx shadcn@latest add https://shadcn-elvinlari-registry.vercel.app/</CodeBlock>
-          </div>
-          <div>
-            <h4 className="font-medium mb-2">Install a component</h4>
-            <CodeBlock id="component-install">npx shadcn@latest add landing-page</CodeBlock>
+            <h4 className="font-medium mb-2">Add the landing page component</h4>
+            <CodeBlock id="registry-add">pnpm dlx shadcn@latest add https://shadcn-elvinlari-registry.vercel.app/r/landing-page.json</CodeBlock>
           </div>
         </CardContent>
       </Card>
@@ -180,13 +176,13 @@ export default function Home() {
             <TabsContent value="installation" className="space-y-4">
               <div>
                 <h4 className="font-medium mb-2">Install the complete landing page</h4>
-                <CodeBlock id="landing-install">npx shadcn@latest add landing-page</CodeBlock>
+                <CodeBlock id="landing-install">pnpm dlx shadcn@latest add https://shadcn-elvinlari-registry.vercel.app/r/landing-page.json</CodeBlock>
               </div>
               <div>
                 <h4 className="font-medium mb-2">Or install individual components</h4>
-                <CodeBlock id="individual-install">{`npx shadcn@latest add announcement
-npx shadcn@latest add marquee  
-npx shadcn@latest add video-player`}</CodeBlock>
+                <CodeBlock id="individual-install">{`pnpm dlx shadcn@latest add https://shadcn-elvinlari-registry.vercel.app/r/announcement.json
+pnpm dlx shadcn@latest add https://shadcn-elvinlari-registry.vercel.app/r/marquee.json
+pnpm dlx shadcn@latest add https://shadcn-elvinlari-registry.vercel.app/r/video-player.json`}</CodeBlock>
               </div>
             </TabsContent>
             
