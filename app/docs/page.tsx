@@ -136,7 +136,22 @@ export default function DocsPage() {
                 
                 <CodeBlock
                   id="step3"
-                  title="3. Import and use the component"
+                  title="3. Add required CSS to your globals.css"
+                >{`@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}`}</CodeBlock>
+                
+                <CodeBlock
+                  id="step4"
+                  title="4. Import and use the component"
                 >{`// app/page.tsx
 import LandingPage from "@/components/landing-page"
 
