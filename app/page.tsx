@@ -4,7 +4,7 @@ import * as React from "react"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Copy, Check, Code, Palette, Zap, Package, FileText } from "lucide-react"
+import { ExternalLink, Copy, Check, Code, Palette, Zap, Package, FileText, Github, Linkedin, Link as LinkIcon, User } from "lucide-react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 // This page displays items from the custom registry with comprehensive documentation.
@@ -307,6 +307,61 @@ export default function CustomPage() {
               </div>
             </TabsContent>
           </Tabs>
+        </CardContent>
+      </Card>
+
+      {/* About the Author */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <User className="h-5 w-5" />
+            About the Author
+          </CardTitle>
+          <CardDescription>
+            Get to know the creator behind this registry
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="flex flex-col gap-6">
+            <div className="flex flex-col sm:flex-row gap-4 items-start">
+              <img 
+                src="https://avatars.githubusercontent.com/u/12527067?v=4" 
+                alt="Elvin Lari" 
+                className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border-2 border-border flex-shrink-0"
+              />
+              <div className="flex-1 min-w-0">
+                <h3 className="text-lg font-semibold mb-3">Elvin Lari</h3>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  Full-stack developer passionate about creating beautiful, accessible, and performant web applications. 
+                  I love building components and tools that help developers create amazing user experiences. 
+                  This registry is a collection of my favorite UI patterns and components built with modern web technologies.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Feel free to reach out if you have questions, suggestions, or just want to connect!
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button variant="outline" size="sm" asChild>
+                <a href="https://github.com/elvinlari" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                  <Github className="h-4 w-4" />
+                  GitHub
+                </a>
+              </Button>
+              <Button variant="outline" size="sm" asChild>
+                <a href="https://www.linkedin.com/in/elvin-lari" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                  <Linkedin className="h-4 w-4" />
+                  LinkedIn
+                </a>
+              </Button>
+              <Button variant="outline" size="sm" asChild>
+                <a href="https://linktr.ee/elvinlari" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                  <LinkIcon className="h-4 w-4" />
+                  LinkTree
+                </a>
+              </Button>
+            </div>
+          </div>
         </CardContent>
       </Card>
 
