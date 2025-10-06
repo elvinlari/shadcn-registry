@@ -110,7 +110,7 @@ export default function Home() {
           </div>
           <div>
             <h4 className="font-medium mb-2">Add our registry</h4>
-            <CodeBlock id="registry-add">npx shadcn@latest add http://localhost:3000</CodeBlock>
+            <CodeBlock id="registry-add">npx shadcn@latest add https://shadcn-elvinlari-registry.vercel.app/</CodeBlock>
           </div>
           <div>
             <h4 className="font-medium mb-2">Install a component</h4>

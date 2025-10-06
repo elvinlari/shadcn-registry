@@ -132,7 +132,7 @@ export default function DocsPage() {
                 <CodeBlock
                   id="step2"
                   title="2. Add our registry"
-                >npx shadcn@latest add http://localhost:3000</CodeBlock>
+                >npx shadcn@latest add https://shadcn-elvinlari-registry.vercel.app/</CodeBlock>
                 
                 <CodeBlock
                   id="step3"
