@@ -112,6 +112,14 @@ export default function Home() {
             <h4 className="font-medium mb-2">Add the landing page component</h4>
             <CodeBlock id="registry-add">pnpm dlx shadcn@latest add https://shadcn-elvinlari-registry.vercel.app/r/landing-page.json</CodeBlock>
           </div>
+          <div>
+            <h4 className="font-medium mb-2">Use in your app</h4>
+            <CodeBlock id="component-usage">{`import LandingPage from "@/components/landing-page"
+
+export default function Page() {
+  return <LandingPage />
+}`}</CodeBlock>
+          </div>
         </CardContent>
       </Card>
 
@@ -188,11 +196,38 @@ pnpm dlx shadcn@latest add https://shadcn-elvinlari-registry.vercel.app/r/video-
             
             <TabsContent value="usage" className="space-y-4">
               <div>
-                <h4 className="font-medium mb-2">Import and use</h4>
-                <CodeBlock id="usage-import">{`import { LandingPage } from "@/components/landing-page"
+                <h4 className="font-medium mb-2">Import and use the complete landing page</h4>
+                <CodeBlock id="usage-import">{`import LandingPage from "@/components/landing-page"
 
 export default function Page() {
   return <LandingPage />
+}`}</CodeBlock>
+              </div>
+              <div>
+                <h4 className="font-medium mb-2">Use in a specific route</h4>
+                <CodeBlock id="usage-route">{`// app/landing/page.tsx
+import LandingPage from "@/components/landing-page"
+
+export default function LandingRoute() {
+  return (
+    <div className="min-h-screen">
+      <LandingPage />
+    </div>
+  )
+}`}</CodeBlock>
+              </div>
+              <div>
+                <h4 className="font-medium mb-2">Customize with props (if needed)</h4>
+                <CodeBlock id="usage-custom">{`// The component includes all sections by default
+// You can wrap it in your own layout or styling
+import LandingPage from "@/components/landing-page"
+
+export default function CustomPage() {
+  return (
+    <div className="custom-wrapper">
+      <LandingPage />
+    </div>
+  )
 }`}</CodeBlock>
               </div>
             </TabsContent>

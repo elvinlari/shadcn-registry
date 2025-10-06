@@ -133,6 +133,16 @@ export default function DocsPage() {
                   id="step2"
                   title="2. Add the landing page component"
                 >pnpm dlx shadcn@latest add https://shadcn-elvinlari-registry.vercel.app/r/landing-page.json</CodeBlock>
+                
+                <CodeBlock
+                  id="step3"
+                  title="3. Import and use the component"
+                >{`// app/page.tsx
+import LandingPage from "@/components/landing-page"
+
+export default function Page() {
+  return <LandingPage />
+}`}</CodeBlock>
               </TabsContent>
               
               <TabsContent value="manual" className="space-y-4">
@@ -236,7 +246,7 @@ export default function DocsPage() {
               <CodeBlock
                 id="landing-usage"
                 title="Basic Usage"
-              >{`import { LandingPage } from "@/components/landing-page"
+              >{`import LandingPage from "@/components/landing-page"
 
 export default function HomePage() {
   return <LandingPage />
@@ -246,13 +256,23 @@ export default function HomePage() {
                 id="landing-nextjs"
                 title="As a Next.js Page"
               >{`// app/page.tsx
-import { LandingPage } from "@/components/landing-page"
+import LandingPage from "@/components/landing-page"
 
 export default function Page() {
+  return <LandingPage />
+}`}</CodeBlock>
+
+              <CodeBlock
+                id="landing-route"
+                title="As a Route Handler"
+              >{`// app/landing/page.tsx
+import LandingPage from "@/components/landing-page"
+
+export default function LandingPageRoute() {
   return (
-    <main>
+    <div className="min-h-screen">
       <LandingPage />
-    </main>
+    </div>
   )
 }`}</CodeBlock>
             </TabsContent>
