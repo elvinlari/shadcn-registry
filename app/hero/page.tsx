@@ -155,7 +155,7 @@ const plans = [
 ];
 
 
-export function FloatingNav({ className }: FloatingNavProps) {
+const FloatingNav = ({ className }: FloatingNavProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
 
