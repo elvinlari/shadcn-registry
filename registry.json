@@ -5,7 +5,7 @@
   "items": [
     {
       "name": "landing-page",
-      "type": "registry:component",
+      "type": "registry:block",
       "title": "Landing Page",
       "description": "A comprehensive landing page with hero, pricing, about, and contact sections.",
       "dependencies": ["@icons-pack/react-simple-icons", "@number-flow/react", "media-chrome", "react-fast-marquee"],
@@ -13,7 +13,7 @@
       "files": [
         {
           "path": "registry/new-york/blocks/landing-page/landing-page.tsx",
-          "type": "registry:component"
+          "type": "registry:block"
         },
         {
           "path": "registry/new-york/blocks/landing-page/components/announcement.tsx",
