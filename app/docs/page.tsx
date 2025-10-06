@@ -61,11 +61,9 @@ export default function DocsPage() {
           Complete documentation for the Lynqsides Shadcn Registry components and landing page.
         </p>
         <div className="flex items-center justify-center">
-          <Button variant="outline" asChild>
-            <a href="/" className="flex items-center gap-2">
-              <Home className="h-4 w-4" />
-              Back to Registry
-            </a>
+          <Button variant="outline" onClick={() => window.location.href = '/'}>
+            <Home className="h-4 w-4 mr-2" />
+            Back to Registry
           </Button>
         </div>
       </header>

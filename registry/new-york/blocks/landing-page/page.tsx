@@ -155,7 +155,7 @@ const plans = [
 ];
 
 
-export function FloatingNav({ className }: FloatingNavProps) {
+function FloatingNav({ className }: FloatingNavProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
 
@@ -430,7 +430,7 @@ const AboutSection = () => (
         <div className="text-left">
           <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
           <p className="text-lg text-muted-foreground mb-6">
-            We're dedicated to providing developers with the best tools and components
+            We&apos;re dedicated to providing developers with the best tools and components
             to build exceptional web applications. Our platform combines modern design
             principles with cutting-edge technology.
           </p>
@@ -476,10 +476,10 @@ const ContactSection = () => (
     <div className="max-w-6xl mx-auto w-full">
       <div className="text-center mb-16">
         <h1 className="mb-4 text-balance font-medium text-5xl tracking-tighter">
-          Let's Build Something Amazing Together
+          Let&apos;s Build Something Amazing Together
         </h1>
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-          Ready to transform your business? Get in touch with our team and let's discuss 
+          Ready to transform your business? Get in touch with our team and let&apos;s discuss 
           how we can help you achieve your goals.
         </p>
       </div>
@@ -497,7 +497,7 @@ const ContactSection = () => (
                 <div>
                   <h3 className="font-semibold">Email Us</h3>
                   <p className="text-muted-foreground">hello@yourcompany.com</p>
-                  <p className="text-sm text-muted-foreground">We'll respond within 24 hours</p>
+                  <p className="text-sm text-muted-foreground">We&apos;ll respond within 24 hours</p>
                 </div>
               </div>
               
@@ -553,7 +553,7 @@ const ContactSection = () => (
           <CardHeader>
             <CardTitle className="text-2xl">Send us a Message</CardTitle>
             <CardDescription>
-              Fill out the form below and we'll get back to you as soon as possible.
+              Fill out the form below and we&apos;ll get back to you as soon as possible.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -609,7 +609,7 @@ const ContactSection = () => (
       <div className="mt-16 text-center bg-card border rounded-lg p-8">
         <h3 className="text-2xl font-semibold mb-4">Ready to Get Started?</h3>
         <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-          Don't wait! Join thousands of satisfied customers who have transformed 
+          Don&apos;t wait! Join thousands of satisfied customers who have transformed 
           their businesses with our platform.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
