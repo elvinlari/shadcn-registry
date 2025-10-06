@@ -304,21 +304,22 @@ const HeroSection = () => (
       <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg blur-3xl -z-10"></div>
       <VideoPlayer className="overflow-hidden rounded-lg border shadow-2xl">
         <VideoPlayerContent
+          key="video-content"
           crossOrigin=""
           muted
           preload="metadata"
-          poster="https://via.placeholder.com/800x450/000000/FFFFFF?text=Video+Placeholder"
+          poster="https://shadcn-elvinlari-registry.vercel.app/bunny.png"
           slot="media"
           src="http://commondatastorage.googleapis.com/gtv-videos-bucket/big_buck_bunny_1080p.mp4"
         />
-        <VideoPlayerControlBar>
-          <VideoPlayerPlayButton />
-          <VideoPlayerSeekBackwardButton />
-          <VideoPlayerSeekForwardButton />
-          <VideoPlayerTimeRange />
-          <VideoPlayerTimeDisplay showDuration />
-          <VideoPlayerMuteButton />
-          <VideoPlayerVolumeRange />
+        <VideoPlayerControlBar key="control-bar">
+          <VideoPlayerPlayButton key="play-button" />
+          <VideoPlayerSeekBackwardButton key="seek-backward" />
+          <VideoPlayerSeekForwardButton key="seek-forward" />
+          <VideoPlayerTimeRange key="time-range" />
+          <VideoPlayerTimeDisplay key="time-display" showDuration />
+          <VideoPlayerMuteButton key="mute-button" />
+          <VideoPlayerVolumeRange key="volume-range" />
         </VideoPlayerControlBar>
       </VideoPlayer>
     </div>

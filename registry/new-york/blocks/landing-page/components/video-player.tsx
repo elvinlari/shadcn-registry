@@ -26,6 +26,7 @@ const variables = {
 } as CSSProperties;
 export const VideoPlayer = ({ style, ...props }: VideoPlayerProps) => (
   <MediaController
+    suppressHydrationWarning={true}
     style={{
       ...variables,
       ...style,
@@ -99,5 +100,9 @@ export const VideoPlayerContent = ({
   className,
   ...props
 }: VideoPlayerContentProps) => (
-  <video className={cn('mt-0 mb-0', className)} {...props} />
+  <video 
+    className={cn('mt-0 mb-0', className)} 
+    suppressHydrationWarning={true}
+    {...props} 
+  />
 );
