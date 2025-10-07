@@ -27,7 +27,14 @@
           "path": "registry/new-york/blocks/landing-page/components/video-player.tsx",
           "type": "registry:ui"
         }
-      ]
+      ],
+      "css": {
+        "@layer base": {
+          "html": {
+            "scroll-behavior": "smooth"
+          }
+        }
+      }
     },
     {
       "name": "announcement",

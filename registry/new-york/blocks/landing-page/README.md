@@ -91,26 +91,6 @@ npx shadcn add video-player
 npx shadcn add floating-nav
 ```
 
-## Styling Requirements
-
-The marquee component requires a CSS animation. Add this to your global CSS:
-
-```css
-@layer utilities {
-  @keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
-  
-  .animate-scroll {
-    animation: scroll 30s linear infinite;
-  }
-}
-```
 
 ## Dependencies
 

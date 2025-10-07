@@ -113,20 +113,6 @@ export default function Home() {
             <CodeBlock id="registry-add">pnpm dlx shadcn@latest add https://shadcn-elvinlari-registry.vercel.app/r/landing-page.json</CodeBlock>
           </div>
           <div>
-            <h4 className="font-medium mb-2">Add CSS to globals.css</h4>
-            <CodeBlock id="css-setup">{`@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}`}</CodeBlock>
-          </div>
-          <div>
             <h4 className="font-medium mb-2">Use in your app</h4>
             <CodeBlock id="component-usage">{`import LandingPage from "@/components/landing-page"
 
@@ -199,20 +185,6 @@ export default function Page() {
               <div>
                 <h4 className="font-medium mb-2">Install the complete landing page</h4>
                 <CodeBlock id="landing-install">pnpm dlx shadcn@latest add https://shadcn-elvinlari-registry.vercel.app/r/landing-page.json</CodeBlock>
-              </div>
-              <div>
-                <h4 className="font-medium mb-2">Add required CSS to your globals.css</h4>
-                <CodeBlock id="css-install">{`@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}`}</CodeBlock>
               </div>
               <div>
                 <h4 className="font-medium mb-2">Or install individual components</h4>
